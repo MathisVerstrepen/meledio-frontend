@@ -4,7 +4,7 @@ const { isMobileOrTablet } = useDevice();
 
 <template>
     <NuxtLayout :name="isMobileOrTablet ? 'mobile' : 'desktop'">
-        <RouterView />
+        <NuxtPage />
     </NuxtLayout>
 </template>
 
