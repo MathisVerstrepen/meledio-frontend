@@ -1,14 +1,12 @@
-import { ClientOnly } from '../../../.nuxt/components';
-
 <script lang="ts" setup>
-const separatorHeight = ref<number | null>(null);
+const separatorHeight = ref<number>(0);
 const navRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-    separatorHeight.value = navRef.value?.offsetHeight - 30;
+    separatorHeight.value = (navRef.value?.offsetHeight || 30) - 30;
 
     window.addEventListener('resize', () => {
-        separatorHeight.value = navRef.value?.offsetHeight - 30;
+        separatorHeight.value = (navRef.value?.offsetHeight || 30) - 30;
     });
 });
 </script>
