@@ -26,4 +26,10 @@ export default defineNuxtConfig({
         // https://image.nuxt.com/get-started/configuration
         format: ["webp"],
     },
+    runtimeConfig: {
+        public: {
+            api: process.env.API_URL,
+            media: process.env.MEDIA_URL,
+        },
+    },
 });
