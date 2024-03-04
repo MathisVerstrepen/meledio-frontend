@@ -25,6 +25,15 @@ export default defineNuxtConfig({
     image: {
         // https://image.nuxt.com/get-started/configuration
         format: ["webp"],
+        providers: {
+            myProvider: {
+                name: "triton",
+                provider: "~/providers/triton.ts", // Path to custom provider
+                options: {
+                    baseURL: "https://dev.media.meledio.com",
+                },
+            },
+        },
     },
     runtimeConfig: {
         public: {
