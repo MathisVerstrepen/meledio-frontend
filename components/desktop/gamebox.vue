@@ -24,9 +24,9 @@ defineProps({
 </script>
 
 <template>
-    <NuxtLink :to="'/game/' + id" class="flex flex-col items-center shrink-0 w-40 p-4 relative">
-        <NuxtPicture provider="triton" :src="'/media/' + id + '/cover/big/' + cover_id" height="164"
-            :img-attrs="{ class: 'rounded-2xl shadow-lg h-[164px]', alt: name }" class="z-10 box" />
+    <NuxtLink :to="'/game/' + id" class="flex flex-col items-center shrink-0 w-44 p-4 relative">
+        <NuxtPicture provider="triton" :src="'/media/' + id + '/cover/big/' + cover_id" height="196"
+            :img-attrs="{ class: 'rounded-2xl shadow-lg h-[196px]', alt: name }" class="z-10 box" />
         <p class="mt-2 text-center text-xs font-bold" :class="theme === 'dark' ? 'text-ghost_white' : 'text-licorice'">
             {{ name }}</p>
     </NuxtLink>
