@@ -16,7 +16,7 @@ const maxItems = ref(0)
 
 const scrollBy = (direction: 'left' | 'right') => {
     if (carouselRef.value && itemWidth) {
-        carouselRef.value.getElementsByClassName('overflow-scroll')[0].scrollBy({
+        carouselRef.value.getElementsByClassName('overflow-x-scroll')[0].scrollBy({
             left: direction === 'left' ? -itemWidth * 2 : itemWidth * 2,
             behavior: 'smooth'
         })
@@ -25,7 +25,7 @@ const scrollBy = (direction: 'left' | 'right') => {
 
 onMounted(() => {
     const carouselWidth = carouselRef.value?.parentElement?.parentElement?.clientWidth || 0
-    itemWidth = carouselRef.value?.getElementsByClassName('overflow-scroll')[0].firstElementChild?.clientWidth || 0
+    itemWidth = carouselRef.value?.getElementsByClassName('overflow-x-scroll')[0].firstElementChild?.clientWidth || 0
 
     if (carouselWidth && itemWidth) {
         maxItems.value = Math.floor((carouselWidth - 64) / itemWidth)
@@ -41,7 +41,7 @@ onMounted(() => {
                 class="w-8 h-8 -rotate-90" @click="scrollBy('left')" />
         </div>
 
-        <div class="flex overflow-scroll no-scrollbar h-56 " :style="'width: ' + (maxItems * itemWidth) + 'px;'">
+        <div class="flex overflow-x-scroll overflow-y-hidden no-scrollbar h-56 " :style="'width: ' + (maxItems * itemWidth) + 'px;'">
             <template v-for="item in items">
                 <DesktopGamebox :id="item.id" :name="item.name" :cover_id="item.cover_id" :cover_hash="item.cover_hash"
                     class="h-full" :theme />

@@ -26,7 +26,7 @@ const { data, pending, error } = await useLazyAsyncData<SortGamesResponse>(
 </script>
 
 <template>
-    <div class="w-full text-ghost_white">
+    <div class="w-full text-ghost_white flex justify-end pr-12">
         <template v-if="pending || !isMounted">
             <DesktopSkeletonsHomeGamesBox />
         </template>
@@ -39,7 +39,7 @@ const { data, pending, error } = await useLazyAsyncData<SortGamesResponse>(
         </template>
 
         <template v-else>
-            <div class="w-fit overflow-hidden bg-ghost_white rounded-[45px] pt-4">
+            <div class="w-fit overflow-hidden bg-ghost_white rounded-[45px] pt-4 ">
                 <DesktopHomeBoxTitles title="Recently added" link="/" theme="light" />
                 <DesktopCarouselArrow :items="(data as GameMin[])" theme="light" />
             </div>
