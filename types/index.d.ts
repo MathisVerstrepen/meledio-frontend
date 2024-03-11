@@ -1,6 +1,7 @@
 export {
     GameMin,
     SortGamesResponse,
+    RandomGamesResponse,
     SortCollectionsResponse,
     CollectionMin,
 }
@@ -18,6 +19,7 @@ declare global {
     }
 
     type SortGamesResponse = Game[];
+    type RandomGamesResponse = Game[];
 
     interface CollectionMin {
         id: number;

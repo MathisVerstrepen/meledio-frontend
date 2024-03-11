@@ -23,7 +23,7 @@ const { data, pending, error } = await useLazyAsyncData<SortGamesResponse>(
         }
     })
 )
-</script>
+</script> 
 
 <template>
     <div class="w-full text-ghost_white flex justify-end pr-12">
