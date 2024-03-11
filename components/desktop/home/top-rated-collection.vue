@@ -9,6 +9,9 @@ defineProps({
     }
 })
 
+const itemsWrapperRef = ref<HTMLElement | null>(null)
+const maxItems = ref(0)
+
 const { data, pending, error } = await useLazyAsyncData<SortCollectionsResponse>(
     'top-rated-collections',
     () => $fetch(`${apiURL}/collections/sort`, {
@@ -24,6 +27,15 @@ const { data, pending, error } = await useLazyAsyncData<SortCollectionsResponse>
         }
     })
 )
+
+watch(() => itemsWrapperRef.value?.clientWidth, () => {
+    const wrapperWidth = itemsWrapperRef.value?.clientWidth || 0
+
+    if (wrapperWidth) {
+        maxItems.value = Math.floor((wrapperWidth*0.9) / 300)
+        console.log(maxItems.value)
+    }
+})
 </script>
 
 <template>
@@ -40,10 +52,10 @@ const { data, pending, error } = await useLazyAsyncData<SortCollectionsResponse>
         </template>
 
         <template v-else>
-            <div class="w-full overflow-hidden pt-4">
+            <div class="w-full overflow-hidden pt-4" ref="itemsWrapperRef" >
                 <DesktopHomeBoxTitles title="Top Rated Collections" link="/" />
-                <div class="flex space-x-4 justify-between mx-12 h-44 items-center">
-                    <DesktopHomeCollectionBox :collection v-for="collection in data?.slice(0,4)" />
+                <div class="flex justify-between mx-12 h-48 items-center collection">
+                    <DesktopHomeCollectionBox :collection v-for="collection in data?.slice(0, maxItems)" />
                 </div>
             </div>
         </template>
