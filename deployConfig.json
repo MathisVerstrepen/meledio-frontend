@@ -1,0 +1,29 @@
+{
+    "_meta": {
+        "deployService": "ApolloLaunch",
+        "deployServiceVersion": "1.0.0"
+    },
+    "config": {
+        "repository": {
+            "owner": "Mathis Verstrepen",
+            "name": "dune-odin"
+        },
+
+        "docker": {
+            "imageName": "dune_odin",
+            "imageTag": "1.0.0",
+            "dockerfileLocation": "odin.dockerfile",
+            "buildArgs": [],
+            "composeFile": "odin-compose.yml",
+            "envFile": "",
+            "envDeployType": "file",
+            "host": "hogwarts-3"
+        },
+
+        "deploy": {
+            "strategy": "all-at-once"
+        },
+
+        "environment": "dev"
+    }
+}

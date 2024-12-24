@@ -21,6 +21,6 @@ body,
 }
 
 body {
-    font-family: 'Switzer';
+    font-family: 'Switzer-Regular', sans-serif;
 }
 </style>

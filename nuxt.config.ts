@@ -35,7 +35,7 @@ export default defineNuxtConfig({
               name: "triton",
               provider: "~/providers/triton.ts", // Path to custom provider
               options: {
-                  baseURL: "https://dev.media.meledio.com",
+                  baseURL: "https://media.meledio.com",
               },
           },
       },
