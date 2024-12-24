@@ -15,7 +15,7 @@
             "dockerfileLocation": "odin.dockerfile",
             "buildArgs": [],
             "composeFile": "odin-compose.yml",
-            "envFile": "",
+            "envFile": "odin.env",
             "envDeployType": "file",
             "host": "hogwarts-3"
         },
