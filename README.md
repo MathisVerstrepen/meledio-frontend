@@ -3,6 +3,9 @@
 
 # MELEDIO - Frontend
 
+> [!IMPORTANT]
+> Development halted due to the complexity of the project
+
 ## Setup
 
 Make sure to install the dependencies:
