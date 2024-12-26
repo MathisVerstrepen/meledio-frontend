@@ -1,6 +1,7 @@
-# Nuxt 3 Minimal Starter
+![ReadMe Banner](https://raw.githubusercontent.com/MathisVerstrepen/github-visual-assets/refs/heads/main/banner/Meledio-Front.png)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+# MELEDIO - Frontend
 
 ## Setup
 
