@@ -6,6 +6,8 @@
 > [!IMPORTANT]
 > Development halted due to the complexity of the project
 
+Figma prototype can be accessed [HERE](https://www.figma.com/design/zn2rncIwm4pCQFl5dzR1Ap/Dune-V2?node-id=0-1&t=2ogDAIdEY6cIzk5c-1)
+
 ## Setup
 
 Make sure to install the dependencies:
